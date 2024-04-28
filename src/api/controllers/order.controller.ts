@@ -49,11 +49,11 @@ export async function getOrders(
     const { id: userId } = user;
 
     const order = await orderService.getOrders(userId);
-    return res.status(201).json(
+    return res.status(200).json(
       responseGenerator({
         data: order,
         message: "Order all orders placed by user",
-        statusCode: 201,
+        statusCode: 200,
       })
     );
   } catch (error) {
