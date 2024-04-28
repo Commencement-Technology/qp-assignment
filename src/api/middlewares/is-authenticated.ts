@@ -1,14 +1,8 @@
-import { Response, NextFunction } from "express";
+import { Request, Response, NextFunction } from "express";
 import { NotAuthorizedError } from "common-utils-functionalities";
 
 import { authService } from "../../services/auth.service";
-
-interface IGetUserAuthInfoRequest {
-  headers: {
-    authorization: string;
-  };
-  user: any;
-}
+import { IGetUserAuthInfoRequest } from "../../types/";
 
 export async function isAuthenticated(
   req: IGetUserAuthInfoRequest,

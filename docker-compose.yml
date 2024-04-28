@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: pmore
+      POSTGRES_PASSWORD: pmore9420
+      POSTGRES_DB: postgres
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: localhost
+      DB_USER: postgres
+      DB_PASSWORD: pmore9420
+      DB_NAME: postgres
+
+volumes:
+  db_data:

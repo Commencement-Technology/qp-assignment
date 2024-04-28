@@ -1,12 +1,7 @@
 import { NotAuthorizedError } from "common-utils-functionalities";
 import { Response, NextFunction } from "express";
 
-interface IGetUserAuthInfoRequest {
-  headers: {
-    authorization: string;
-  };
-  user: any;
-}
+import { IGetUserAuthInfoRequest } from "../../types";
 
 export function isAuthorized(
   req: IGetUserAuthInfoRequest,

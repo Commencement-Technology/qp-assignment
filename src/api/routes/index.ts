@@ -10,6 +10,6 @@ const mainRouter = express.Router();
 
 mainRouter.use("/api/v1/inventories", isAuthenticated, inventoryRouter);
 mainRouter.use("/api/v1/users", userRouter);
-mainRouter.use("/api/v1/orders", orderRouter);
+mainRouter.use("/api/v1/orders", isAuthenticated, orderRouter);
 
 export { mainRouter };

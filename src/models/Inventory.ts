@@ -1,7 +1,7 @@
-import { DataTypes } from "sequelize";
+import { DataTypes, Op } from "sequelize";
 
 import { sequelize } from "../loaders/database";
-import { OrderItemsModel  } from "./OrderItems";
+import { OrderItemsModel } from "./OrderItems";
 
 export const InventoryModel = sequelize.define(
   "Inventory",
@@ -30,6 +30,21 @@ export const InventoryModel = sequelize.define(
     timestamps: true,
     modelName: "inventory",
     tableName: "inventory",
+    indexes: [
+      {
+        fields: ["name"],
+        unique: true,
+      },
+      {
+        name: "inventory_id_quantity",
+        fields: ["id", "quantity"],
+        where: {
+          quantity: {
+            [Op.gt]: 0,
+          },
+        },
+      },
+    ],
   }
 );
 

@@ -26,3 +26,26 @@ export async function placeOrder(
     next(error);
   }
 }
+
+export async function getOrders(
+  req: IGetUserAuthInfoRequest,
+  res: Response,
+  next: NextFunction
+) {
+  try {
+    const user = req.user;
+
+    const { id: userId } = user;
+
+    const order = await orderService.getOrders(userId);
+    return res.status(201).json(
+      responseGenerator({
+        data: order,
+        message: "Order all orders placed by user",
+        statusCode: 201,
+      })
+    );
+  } catch (error) {
+    next(error);
+  }
+}

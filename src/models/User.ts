@@ -25,7 +25,6 @@ export const UserModel = sequelize.define(
         isEmail: true,
       },
       allowNull: false,
-      unique: true,
     },
     password: {
       type: DataTypes.STRING,
@@ -42,6 +41,16 @@ export const UserModel = sequelize.define(
     timestamps: true,
     modelName: "users",
     tableName: "users",
+    indexes: [
+      {
+        unique: true,
+        fields: ["email"],
+      },
+      {
+        name: "email_password",
+        fields: ["email", "password"],
+      }
+    ],
   }
 );
 

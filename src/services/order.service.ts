@@ -65,6 +65,21 @@ class OrderService {
       throw error;
     }
   }
+
+  async getOrders(userId: string) {
+    try {
+      const orders = await this.orderModel.findAll({
+        where: { userId },
+        include: [{ model: OrderItemsModel, include: [InventoryModel] }],
+        order: [["createdAt", "DESC"]],
+        raw: true,
+        nest: true,
+      });
+      return orders;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
 export const orderService: OrderService = new OrderService(

@@ -25,6 +25,11 @@ export const OrderModel = sequelize.define(
     timestamps: true,
     modelName: "order",
     tableName: "order",
+    indexes: [
+      {
+        fields: ["userId"],
+      },
+    ],
   }
 );
 
@@ -39,6 +44,5 @@ OrderModel.hasMany(OrderItemsModel, {
 OrderItemsModel.belongsTo(OrderModel, {
   foreignKey: "orderId",
 });
-
 
 OrderModel.sync();

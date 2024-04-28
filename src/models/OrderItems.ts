@@ -17,15 +17,20 @@ export const OrderItemsModel = sequelize.define(
     },
     itemId: {
       type: DataTypes.UUID,
-      allowNull: false
+      allowNull: false,
     },
   },
   {
     timestamps: true,
     modelName: "OrderItems",
     tableName: "OrderItems",
+    indexes: [
+      {
+        name: "created_at",
+        fields: ["createdAt"],
+      },
+    ],
   }
 );
-  
 
 OrderItemsModel.sync();
