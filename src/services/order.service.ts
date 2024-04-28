@@ -1,4 +1,3 @@
-import { BadRequestError } from "common-utils-functionalities";
 import { sequelize } from "../loaders/database";
 import { InventoryModel } from "../models/Inventory";
 import { OrderModel } from "../models/Order";

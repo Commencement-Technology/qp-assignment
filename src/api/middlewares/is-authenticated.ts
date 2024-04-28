@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from "express";
+import { Response, NextFunction } from "express";
 import { NotAuthorizedError } from "common-utils-functionalities";
 
 import { authService } from "../../services/auth.service";

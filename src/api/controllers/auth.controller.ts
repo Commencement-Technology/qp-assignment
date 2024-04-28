@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from "express";
-import { authService } from "../../services/auth.service";
 import { responseGenerator } from "common-utils-functionalities";
+
+import { authService } from "../../services/auth.service";
 
 export async function signup(req: Request, res: Response, next: NextFunction) {
   try {

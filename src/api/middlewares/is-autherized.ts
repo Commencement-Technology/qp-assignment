@@ -1,5 +1,5 @@
-import { NotAuthorizedError } from "common-utils-functionalities";
 import { Response, NextFunction } from "express";
+import { NotAuthorizedError } from "common-utils-functionalities";
 
 import { IGetUserAuthInfoRequest } from "../../types";
 
