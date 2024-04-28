@@ -1,0 +1,765 @@
+{
+	"info": {
+		"_postman_id": "263af559-f8bf-4250-a1cb-fc1c62c335f6",
+		"name": "APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25247444",
+		"_collection_link": "https://winter-shuttle-246572.postman.co/workspace/Rate-and-Reviews~6ccc2446-941e-4f88-9851-15cb75eceb92/collection/25247444-263af559-f8bf-4250-a1cb-fc1c62c335f6?action=share&source=collection_link&creator=25247444"
+	},
+	"item": [
+		{
+			"name": "Get all inventory - User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBtb3JlNzAwNkBnbWFpbC5jb20iLCJyb2xlIjoiVVNFUiIsImlkIjoiOWQzNjFjODAtMDUyNi0xMWVmLWJlMWQtMTdhNmI2Y2NiZmYzIiwiaWF0IjoxNzE0Mjg0ODkyLCJleHAiOjE3MTQzNzEyOTJ9.JKBDENeBqRDRM6HW1Oc9LS5_wbWyOZ8OaE1vwIUwEq8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/v1/inventories",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inventories"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all inventory- user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/v1/inventories",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"inventories"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "224"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e0-B8ov4QDgaHKUBMGD5KwMcLrSIZg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Apr 2024 12:49:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"ok\": true,\n    \"message\": \"Inventory\",\n    \"data\": [\n        {\n            \"id\": \"ad844940-055d-11ef-9ab5-47612f6dfc73\",\n            \"name\": \"Mango\",\n            \"price\": \"34\",\n            \"quantity\": 2,\n            \"createdAt\": \"2024-04-28T12:48:57.300Z\",\n            \"updatedAt\": \"2024-04-28T12:48:57.300Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all inventory - Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBtb3JlNzAwNkBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpZCI6ImE5ODc1YzcwLTA1MzktMTFlZi04ZjNiLWVmMzNjMjRhZmQxMCIsImlhdCI6MTcxNDMwODYxOSwiZXhwIjoxNzE0Mzk1MDE5fQ.RKUVJAT8hDXU6gXX3wg_hNW9ufPOSGdCkWcmmGDLg_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/v1/inventories",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inventories"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all inventory - Admin",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/v1/inventories",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"inventories"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "557"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22d-rVZqM+9UcyFEO88V6PZf4WEs1WA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Apr 2024 12:50:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"ok\": true,\n    \"message\": \"Inventory\",\n    \"data\": [\n        {\n            \"id\": \"edea4f60-053b-11ef-9f4c-25b424c9f4b0\",\n            \"name\": \"Apple\",\n            \"price\": \"34\",\n            \"quantity\": 0,\n            \"createdAt\": \"2024-04-28T08:47:22.455Z\",\n            \"updatedAt\": \"2024-04-28T09:02:13.708Z\"\n        },\n        {\n            \"id\": \"7c4f1da0-0535-11ef-8208-edfdb4e38e6a\",\n            \"name\": \"Banana\",\n            \"price\": \"4343\",\n            \"quantity\": 0,\n            \"createdAt\": \"2024-04-28T08:01:14.874Z\",\n            \"updatedAt\": \"2024-04-28T09:02:16.765Z\"\n        },\n        {\n            \"id\": \"ad844940-055d-11ef-9ab5-47612f6dfc73\",\n            \"name\": \"Mango\",\n            \"price\": \"34\",\n            \"quantity\": 2,\n            \"createdAt\": \"2024-04-28T12:48:57.300Z\",\n            \"updatedAt\": \"2024-04-28T12:48:57.300Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Place Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBtb3JlNzAwNkBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpZCI6ImE5ODc1YzcwLTA1MzktMTFlZi04ZjNiLWVmMzNjMjRhZmQxMCIsImlhdCI6MTcxNDI5MzA3NiwiZXhwIjoxNzE0Mzc5NDc2fQ.nXWKYQJ9Y9LiFR97zZvYE_jJ6POxxq9KzuaJqlUQ2Go",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\": [\n        \"ad844940-055d-11ef-9ab5-47612f6dfc73\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/api/v1/orders",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Place Order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"items\": [\n        \"ad844940-055d-11ef-9ab5-47612f6dfc73\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/v1/orders",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "292"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"124-zefe2uqrY2PbqmlncXQTJINIPig\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Apr 2024 12:56:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 201,\n    \"ok\": true,\n    \"message\": \"Order has been placed\",\n    \"data\": [\n        {\n            \"id\": \"ab31ff60-055e-11ef-b0a3-159ef0176f4a\",\n            \"orderId\": \"ab2fdc80-055e-11ef-b0a3-159ef0176f4a\",\n            \"itemId\": \"ad844940-055d-11ef-9ab5-47612f6dfc73\",\n            \"createdAt\": \"2024-04-28T12:56:02.902Z\",\n            \"updatedAt\": \"2024-04-28T12:56:02.902Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add item to inventory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBtb3JlNzAwNkBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpZCI6ImE5ODc1YzcwLTA1MzktMTFlZi04ZjNiLWVmMzNjMjRhZmQxMCIsImlhdCI6MTcxNDI5MzA3NiwiZXhwIjoxNzE0Mzc5NDc2fQ.nXWKYQJ9Y9LiFR97zZvYE_jJ6POxxq9KzuaJqlUQ2Go",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Mango\",\n    \"price\" : 34,\n    \"quantity\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/api/v1/inventories",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inventories"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add item to inventory",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mango\",\n    \"price\" : 34,\n    \"quantity\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/v1/inventories",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"inventories"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "237"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ed-ODnB/JuudUTXmmyV+gAxY6ZsEvo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Apr 2024 12:48:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 201,\n    \"ok\": true,\n    \"message\": \"Inventory has been added\",\n    \"data\": {\n        \"id\": \"ad844940-055d-11ef-9ab5-47612f6dfc73\",\n        \"name\": \"Mango\",\n        \"price\": \"34\",\n        \"quantity\": 2,\n        \"updatedAt\": \"2024-04-28T12:48:57.300Z\",\n        \"createdAt\": \"2024-04-28T12:48:57.300Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update item in inventory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBtb3JlNzAwNkBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpZCI6ImE5ODc1YzcwLTA1MzktMTFlZi04ZjNiLWVmMzNjMjRhZmQxMCIsImlhdCI6MTcxNDMwODYxOSwiZXhwIjoxNzE0Mzk1MDE5fQ.RKUVJAT8hDXU6gXX3wg_hNW9ufPOSGdCkWcmmGDLg_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Apple\",\n    \"price\": 4343,\n    \"quantity\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/api/v1/inventories/edea4f60-053b-11ef-9f4c-25b424c9f4b0",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inventories",
+						"edea4f60-053b-11ef-9f4c-25b424c9f4b0"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update item in inventory",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Apple\",\n    \"price\": 4343,\n    \"quantity\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/v1/inventories/edea4f60-053b-11ef-9f4c-25b424c9f4b0",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"inventories",
+								"edea4f60-053b-11ef-9f4c-25b424c9f4b0"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "239"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ef-4SLvosdG2pbywbX3fyFdPSDTH7Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Apr 2024 12:57:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"ok\": true,\n    \"message\": \"Inventory has been updated\",\n    \"data\": {\n        \"id\": \"edea4f60-053b-11ef-9f4c-25b424c9f4b0\",\n        \"name\": \"Apple\",\n        \"price\": 4343,\n        \"quantity\": 5,\n        \"createdAt\": \"2024-04-28T08:47:22.455Z\",\n        \"updatedAt\": \"2024-04-28T12:57:13.047Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete item in inventory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBtb3JlNzAwNkBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpZCI6ImE5ODc1YzcwLTA1MzktMTFlZi04ZjNiLWVmMzNjMjRhZmQxMCIsImlhdCI6MTcxNDMwODYxOSwiZXhwIjoxNzE0Mzk1MDE5fQ.RKUVJAT8hDXU6gXX3wg_hNW9ufPOSGdCkWcmmGDLg_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/v1/inventories/edea4f60-053b-11ef-9f4c-25b424c9f4b0",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inventories",
+						"edea4f60-053b-11ef-9f4c-25b424c9f4b0"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete item in inventory",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/v1/inventories/edea4f60-053b-11ef-9f4c-25b424c9f4b0",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"inventories",
+								"edea4f60-053b-11ef-9f4c-25b424c9f4b0"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "76"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4c-sQV/n0CkBNNIT7M0uvh7WQEad0w\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Apr 2024 12:58:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"ok\": true,\n    \"message\": \"Inventory has been deleted\",\n    \"data\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"pmore7006@gmail.com\",\n    \"password\": \"4343434343\",\n    \"isAdmin\": true,\n    \"firstName\": \"Prathamesh\",\n    \"lastName\": \"More\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/api/v1/users/signup",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sign up",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"pmore7006@gmail.com\",\n    \"password\": \"4343434343\",\n    \"isAdmin\": true,\n    \"firstName\": \"Prathamesh\",\n    \"lastName\": \"More\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/v1/users/signup",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"signup"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "361"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"169-RmoNkTOzZ/tbC3JLRK007V7GTbc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Apr 2024 08:31:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 201,\n    \"ok\": true,\n    \"message\": \"User signed up successfully\",\n    \"data\": {\n        \"id\": \"a9875c70-0539-11ef-8f3b-ef33c24afd10\",\n        \"email\": \"pmore7006@gmail.com\",\n        \"lastName\": \"More\",\n        \"firstName\": \"Prathamesh\",\n        \"password\": \"$2b$10$88SK644cXtmuzCqyNz3SV.RrjjdWk1U.uacMq4lCyDQLLBn1SA2ra\",\n        \"role\": \"ADMIN\",\n        \"updatedAt\": \"2024-04-28T08:31:08.728Z\",\n        \"createdAt\": \"2024-04-28T08:31:08.728Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Sign in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"pmore7006@gmail.com\",\n    \"password\": \"4343434343\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/api/v1/users/signin?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBtb3JlNzAwNkBnbWFpbC5jb20iLCJpc0FkbWluIjoiQURNSU4iLCJpZCI6IjRmMTUwYzgwLTA0YTEtMTFlZi05NGRmLWYxYjE5OTI5Mzk4NSIsImlhdCI6MTcxNDIyODI0MH0.dwem9KL2l6HTGa742uJXZyqIiwTcuCtKr6smwAoZ5lU",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"signin"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBtb3JlNzAwNkBnbWFpbC5jb20iLCJpc0FkbWluIjoiQURNSU4iLCJpZCI6IjRmMTUwYzgwLTA0YTEtMTFlZi05NGRmLWYxYjE5OTI5Mzk4NSIsImlhdCI6MTcxNDIyODI0MH0.dwem9KL2l6HTGa742uJXZyqIiwTcuCtKr6smwAoZ5lU"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sign in",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"pmore7006@gmail.com\",\n    \"password\": \"4343434343\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/v1/users/signin?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBtb3JlNzAwNkBnbWFpbC5jb20iLCJpc0FkbWluIjoiQURNSU4iLCJpZCI6IjRmMTUwYzgwLTA0YTEtMTFlZi05NGRmLWYxYjE5OTI5Mzk4NSIsImlhdCI6MTcxNDIyODI0MH0.dwem9KL2l6HTGa742uJXZyqIiwTcuCtKr6smwAoZ5lU",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"signin"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBtb3JlNzAwNkBnbWFpbC5jb20iLCJpc0FkbWluIjoiQURNSU4iLCJpZCI6IjRmMTUwYzgwLTA0YTEtMTFlZi05NGRmLWYxYjE5OTI5Mzk4NSIsImlhdCI6MTcxNDIyODI0MH0.dwem9KL2l6HTGa742uJXZyqIiwTcuCtKr6smwAoZ5lU"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "325"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"145-HJJ2aZWDKcRUNRXinpNzNBLZLpk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Apr 2024 12:50:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"ok\": true,\n    \"message\": \"User signed in successfully\",\n    \"data\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBtb3JlNzAwNkBnbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJpZCI6ImE5ODc1YzcwLTA1MzktMTFlZi04ZjNiLWVmMzNjMjRhZmQxMCIsImlhdCI6MTcxNDMwODYxOSwiZXhwIjoxNzE0Mzk1MDE5fQ.RKUVJAT8hDXU6gXX3wg_hNW9ufPOSGdCkWcmmGDLg_g\"\n}"
+				}
+			]
+		}
+	]
+}

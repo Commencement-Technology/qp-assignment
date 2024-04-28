@@ -15,6 +15,17 @@ export async function placeOrder(
     const { items } = body as unknown as { items: string[] };
 
     const order = await orderService.placeOrder({ items, userId });
+
+    if (order?.length === 0) {
+      return res.status(400).json(
+        responseGenerator({
+          data: order,
+          message: "Inventory out of stock",
+          statusCode: 400,
+        })
+      );
+    }
+
     return res.status(201).json(
       responseGenerator({
         data: order,

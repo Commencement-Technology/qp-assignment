@@ -1,3 +1,4 @@
+import { BadRequestError } from "common-utils-functionalities";
 import { sequelize } from "../loaders/database";
 import { InventoryModel } from "../models/Inventory";
 import { OrderModel } from "../models/Order";
@@ -28,6 +29,10 @@ class OrderService {
          */
         const availableInventories =
           await this.inventoryService.getMultipleInventories(items);
+
+        if (availableInventories.length === 0) {
+          return [];
+        }
 
         const order = await this.orderModel.create(
           {
